@@ -1,0 +1,11 @@
+#lang racket
+(define (insert)
+  (display "Введите длину ребра (см) и нажмите клавишу <Enter> = ")
+  (read))
+(define (cube a)
+  (display "Вычисление объема куба.")
+  (newline)
+  (display "Объем куба: ")
+  (display (* a a a))
+  (display " куб.см."))
+(cube (insert))
