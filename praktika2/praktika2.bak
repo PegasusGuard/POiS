@@ -1,0 +1,46 @@
+#lang racket
+(define pi 3.14)
+(define (insert message)
+  (display message)
+  (read))
+(define (square x)
+    (* x x))
+(define (correct r1 r2)
+  (display "Площадь кольца: ")
+  (display (* pi (- (square r1) (square r2))))
+  (display " см^2"))
+  
+(define (ring r1 r2)
+  (if (> r2 r1) (display "Ошибка! Радиус отверстия не может быть больше радиуса кольца.")
+      (correct r1 r2)))
+(display "Введите исходные данные")(newline)
+(ring (insert "Радиус кольца (см) => ") (insert "Радиус отверстия (см) => "))
+
+(newline)
+
+; Задание 6
+
+(define (price initial)
+  (if (>= initial 1000)
+      (begin
+        (write "Вам предоставлена скидка 10%")
+        (newline)
+        (write (* 0.9 initial))
+        (write " .руб"))
+      (begin
+        (write "Скидки нет")(newline)
+        (write initial)
+        (write " . руб"))))
+(display "")(newline)
+(price (insert "Введите сумму покупки: "))
+        
+(newline)        
+; Задание 7
+
+(define (WWII date)
+  (if (not (= date 1939))
+      (write "Неверно! Вторая мировая началась в 1939 году")
+      (write "Верно, молодец. Вторая мировая началась в 1939 году")))
+
+(write "В каком году началась вторая мировая война?")(newline)
+(WWII (insert "Введите число и нажмите Enter"))
