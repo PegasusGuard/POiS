@@ -49,4 +49,3 @@
 (display "Введите два списка. Список вводится в круглых скобках")(newline)
 (task3 (insert "Первый список: ") (insert "Второй список: "))(newline)
 
-;(if ( list? (car (read))) (display "true") (display "false"))
